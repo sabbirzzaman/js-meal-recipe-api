@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meal Recipe</title>
 
     <!-- Link favicon -->
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
     <!-- Link css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <main>
-        <!-- Header Area -->
-        <header>
-            <div class="container">
-                <a href="./index.html" class="logo">Meal Recipe</a>
-            </div>
-        </header>
-
-        <!-- Search form -->
-        <section class="search">
-            <div class="container">
-                <div id="search-form">
-                    <input id="search" type="text" placeholder="Search your meal...">
-                    <button onclick="getMeal()">Search</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Knowledge Board -->
-        <div class="board container">
-            <p id="board">😋 Search you meal</p>
+      <!-- Header Area -->
+      <header>
+        <div class="container">
+          <a href="./index.html" class="logo">Meal Recipe</a>
         </div>
+      </header>
 
-        <!-- Meal container -->
-        <section class="meal-section">
-            <div class="container">
-                <div id="all-meals" class="meals">
-                </div>
-            </div>
-        </section>
+      <!-- Search form -->
+      <section class="search">
+        <div class="container">
+          <div id="search-form">
+            <input id="search" type="text" placeholder="Search your meal..." />
+            <button onclick="getMeal()">Search</button>
+          </div>
+          <div class="reload-btn">
+              <button id="reload-id">Reload Page</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Knowledge Board -->
+      <div id="board-container" class="board container">
+        <p id="board">😋 Search you meal</p>
+      </div>
+
+      <!-- Meal container -->
+      <section id="meal-container" class="meal-section">
+        <div class="container">
+          <div id="all-meals" class="meals"></div>
+        </div>
+      </section>
+
+      <!-- Single Meal Page -->
+      <div class="page-meal">
+        <div class="container">
+          <div id="item-details" class="meal-details">
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- Link Js file -->
     <script src="./assets/js/app.js"></script>
-</body>
+  </body>
 </html>

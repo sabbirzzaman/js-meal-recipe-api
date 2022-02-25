@@ -1,11 +1,10 @@
 // Load meal api
-const getMeal = () => {
-  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${
-    searchMeal().value
-  }`;
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => displayMeal(data));
+const getMeal = async () => {
+  const searchKeyword = searchMeal().value;
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchKeyword}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  displayMeal(data);
 };
 
 const searchMeal = () => {
@@ -36,7 +35,6 @@ const displayMeal = (foods) => {
     mealBoard.innerText = `${foods.meals.length} Results for '${keyword}'`;
 
     foods.meals.forEach((meal) => {
-        console.log(meal);
       // Create Elements
       const mealDiv = document.createElement('div');
       const mealImg = document.createElement('img');
@@ -47,6 +45,7 @@ const displayMeal = (foods) => {
       // Class/Attribute Added
       mealDiv.classList.add('meal');
       mealImg.setAttribute('src', meal.strMealThumb);
+      mealBtn.setAttribute('onclick', `getSingleMeal('${meal.idMeal}');`);
 
       // Set Inner Text
       mealHeading.innerText = meal.strMeal;
@@ -62,3 +61,43 @@ const displayMeal = (foods) => {
     });
   }
 };
+
+const getSingleMeal = async (mealId) => {
+  const searchId = document.getElementById('search-form');
+  const board = document.getElementById('board-container');
+  const mealItems = document.getElementById('meal-container');
+  const mealReload = document.getElementById('reload-id');
+
+  searchId.textContent = '';
+  board.textContent = '';
+  mealItems.style.display = 'none';
+  mealReload.style.display = 'block';
+
+  url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
+  const res = await fetch(url);
+  const data = await res.json();
+
+  displaySingleMeal(data);
+};
+
+const displaySingleMeal = (meals) => {
+  const meal = meals.meals[0];
+
+  const singleMealDiv = document.getElementById('item-details');
+
+  const singleMealImg = document.createElement('img');
+  const singleMealHeading = document.createElement('h2');
+  const singleMealDetails = document.createElement('p');
+
+  singleMealImg.setAttribute('src', meal.strMealThumb);
+  singleMealHeading.innerText = meal.strMeal;
+  singleMealDetails.innerText = meal.strInstructions;
+
+  singleMealDiv.appendChild(singleMealImg);
+  singleMealDiv.appendChild(singleMealHeading);
+  singleMealDiv.appendChild(singleMealDetails);
+};
+
+document.getElementById('reload-id').addEventListener('click', () => {
+  location.reload()
+});
