@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDE8E9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 50px;
+    font-family: 'Redressed', cursive;
+    color: #580C1F;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.search {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 8px 15px;
+    border: 2px solid #580C1F;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+input[type="text"]::placeholder {
+    color: rgba(34, 28, 28, 0.747);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="button"] {
+    padding: 5px 15px;
+    background-color: #580C1F;
+    border: 1px solid #580C1F;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+.meal-section {
+    padding: 50px 0;
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.meal-item {
+    background-color: #fffdf7;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.meal-name h3 {
+    margin-bottom: 10px;
+}
+
+.meal-name p {
+    margin-bottom: 10px;
+}
+
+.meal-name button {
+    padding: 5px 15px;
+    background-color: #580C1F;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
