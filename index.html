@@ -5,24 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Recipe</title>
+
+    <!-- Link js -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <main>
-        <section>
+        <!-- Header Area -->
+        <header>
             <div class="container">
                 <a href="#" class="logo">Meal Recipe</a>
             </div>
-        </section>
+        </header>
+
+        <!-- Search form -->
         <section class="search">
             <div class="container">
-                <form id="search-form">
+                <div id="search-form">
                     <input type="text" placeholder="Search your meal...">
-                    <input type="button" value="Search">
-                </form>
+                    <button onclick="getMeal()">Search</button>
+                </div>
             </div>
         </section>
 
+        <!-- Meal container -->
         <section class="meal-section">
             <div class="container">
                 <div class="meals">
@@ -33,7 +39,7 @@
                         <div class="meal-name">
                             <h3>Chivito uruguayo</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, accusantium.</p>
-                            <button onclick="displayMeal()">Details</button>
+                            <button>Details</button>
                         </div>
                     </div>
                 </div>
@@ -41,6 +47,7 @@
         </section>
     </main>
 
+    <!-- Link Js file -->
     <script src="./assets/js/app.js"></script>
 </body>
 </html>

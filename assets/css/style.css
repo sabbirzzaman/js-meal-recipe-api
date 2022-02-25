@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Redressed&display=swap');
 
 * {
     margin: 0;
@@ -22,20 +21,24 @@ img {
     border-radius: 10px;
 }
 
+header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
 .logo {
     font-size: 50px;
     font-family: 'Redressed', cursive;
     color: #580C1F;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .search {
     text-align: center;
 }
 
-form {
+#search-form {
     display: flex;
     justify-content: center;
 }
@@ -60,7 +63,7 @@ input[type="text"]:focus {
     outline: none;
 }
 
-input[type="button"] {
+button {
     padding: 5px 15px;
     background-color: #580C1F;
     border: 1px solid #580C1F;
