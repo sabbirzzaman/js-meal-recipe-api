@@ -1,108 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Redressed&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #FDE8E9;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fde8e9;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 img {
-    width: 100%;
-    border-radius: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
 
 header {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .logo {
-    font-size: 50px;
-    font-family: 'Redressed', cursive;
-    color: #580C1F;
-    text-decoration: none;
+  font-size: 50px;
+  font-family: 'Redressed', cursive;
+  color: #580c1f;
+  text-decoration: none;
 }
 
 .search {
-    text-align: center;
+  text-align: center;
 }
 
 #search-form {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .board {
-    text-align: center;
-    padding-top: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 
-input[type="text"] {
-    width: 50%;
-    padding: 8px 15px;
-    border: 2px solid #580C1F;
-    border-radius: 5px 0px 0px 5px;
+input[type='text'] {
+  width: 50%;
+  padding: 8px 15px;
+  border: 2px solid #580c1f;
+  border-radius: 5px 0px 0px 5px;
 }
 
-
-input[type="text"]::placeholder {
-    color: rgba(34, 28, 28, 0.747);
-    text-transform: capitalize;
-    letter-spacing: 2px;
-    font-size: 13px;
-    line-height: 13px;
+input[type='text']::placeholder {
+  color: rgba(34, 28, 28, 0.747);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 13px;
+  line-height: 13px;
 }
 
-input[type="text"]:focus {
-    outline: none;
+input[type='text']:focus {
+  outline: none;
 }
 
 button {
-    padding: 5px 15px;
-    background-color: #580C1F;
-    border: 1px solid #580C1F;
-    color: #fff;
-    border-radius: 0px 5px 5px 0px;
-    cursor: pointer;
+  padding: 5px 15px;
+  background-color: #580c1f;
+  border: 1px solid #580c1f;
+  color: #fff;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
 }
 
 .meal-section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .meals {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .meal {
-    background-color: #fffdf7;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: #fffdf7;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.meal img, .meal h3, .meal p {
-    margin-bottom: 10px;
+.meal img,
+.meal h3,
+.meal p {
+  margin-bottom: 10px;
 }
 
 .meal button {
-    padding: 5px 15px;
-    background-color: #580C1F;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 5px 15px;
+  background-color: #580c1f;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Medium devices (landscape tablets, 689px and up) */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium devices (phones, 688px and down) */
+@media only screen and (max-width: 688px) {
+  .container {
+    max-width: 325px;
+  }
+
+  .meals {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  input[type='text'] {
+    width: 100%;
+  }
 }
