@@ -82,22 +82,18 @@ button {
     gap: 30px;
 }
 
-.meal-item {
+.meal {
     background-color: #fffdf7;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.meal-name h3 {
+.meal img, .meal h3, .meal p {
     margin-bottom: 10px;
 }
 
-.meal-name p {
-    margin-bottom: 10px;
-}
-
-.meal-name button {
+.meal button {
     padding: 5px 15px;
     background-color: #580C1F;
     border: none;
