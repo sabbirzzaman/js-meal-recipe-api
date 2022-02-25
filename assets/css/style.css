@@ -11,6 +11,14 @@ body {
   background-color: #fde8e9;
 }
 
+h2 {
+  font-size: 38px;
+}
+
+p {
+  color: #414141;
+}
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -90,7 +98,6 @@ button {
   background-color: #fffdf7;
   padding: 15px;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .meal img,
@@ -106,6 +113,20 @@ button {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.page-details {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.page-image img {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.meal-details h2, .meal-details p {
+  margin-bottom: 10px;
 }
 
 /* Medium devices (landscape tablets, 689px and up) */

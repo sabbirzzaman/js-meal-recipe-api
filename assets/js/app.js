@@ -11,7 +11,6 @@ const getMeal = () => {
 const searchMeal = () => {
   // Select Search Input
   const searchInput = document.getElementById('search');
-
   return searchInput;
 };
 
@@ -37,6 +36,7 @@ const displayMeal = (foods) => {
     mealBoard.innerText = `${foods.meals.length} Results for '${keyword}'`;
 
     foods.meals.forEach((meal) => {
+        console.log(meal);
       // Create Elements
       const mealDiv = document.createElement('div');
       const mealImg = document.createElement('img');
